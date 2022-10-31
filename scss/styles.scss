@@ -1,0 +1,271 @@
+$font-family-base: 'Noto Sans Mono', monospace;
+$body-bg: black;
+$primary: yellow;
+$secondary: violet;
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $secondary;
+$btn-hover-color: black;
+$dark: black;    
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+}
+
+
+#navbarSupportedContent{
+    justify-content: center;
+}
+
+nav.navbar {
+    font-size: 1.25em;
+    width: 100%;
+}
+
+header {
+    width: 80%;
+    position: sticky;
+    top: 0;
+    z-index: 111;
+}
+
+p,
+h2, h3 {
+    color: yellow;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: blueviolet;
+    transition: color 1s;
+}
+
+.container {
+    max-width: 80%;
+}
+
+.imagenCentral {
+    height: 40vh;
+    background-image: url(../img/inicio.jpg);
+    margin: 20px 0;
+    background-size: cover;
+}
+
+section {
+    margin: 50px 0;
+}
+
+.bio,
+.sesiones {
+    display: flex;
+    min-height: 40vh;
+}
+
+.bio div, .sesiones div {
+    width: 50%;
+    margin: 0px;
+}
+
+.bio .bio-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px 0 0;
+    justify-content: center;
+}
+
+.bio .bio-img {
+    background: url(../img/bio.jpg) center;
+    background-size: cover;
+    margin: 20px 0;
+}
+
+.sesiones .sesiones-img {
+    background: url(../img/sesiones.jpg) top;
+    background-size: cover;
+}
+
+.bio .bio-buttons {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.bio button, .boton-calendar {
+    border: 1px yellow solid;
+    padding: 8px 10px;
+}
+
+.sesiones {
+    justify-content: center;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.sesiones-text {
+    padding-left: 35px;
+}
+
+.cursos-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cursos h3 {
+    font-size: 20px;
+}
+
+.cursos-contenido {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+}
+
+.cursos-contenido>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+}
+
+.cursos-contenido a {
+    margin-top: 10px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.posts img{
+    width: 300px;
+    height: 300px;
+}
+
+.posts a{
+    margin: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.redes {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.redes img {
+    margin: 0 20px;
+    margin-bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.newsletter {
+    line-height: 1.6;
+    text-align: center;
+}
+
+.bio-text-mobile{
+    display: none;
+
+}
+
+@media screen and (max-width: 992px) {
+
+    body {
+        max-width: 70vw;
+    }
+
+    nav.navbar {
+        justify-content: center;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+    .imagenCentral{
+        height: 20vh;
+    }
+    .bio, .sesiones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 20vh;
+    }
+
+    .bio .bio-img, .bio .bio-text, .sesiones .sesiones-text {
+        padding: 0;
+        text-align: left;
+    }
+
+    .bio-buttons {
+        margin-bottom: 25px;
+    }
+    .cursos-contenido {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio div, .sesiones div{
+        width: 100%;
+    }
+
+    .bio .bio-img, .sesiones .sesiones-img {
+        height: 35vh;
+        margin-bottom: 35px;
+        
+    }
+
+
+    .sesiones{
+        text-align: center;
+        margin: 10px 0;
+
+    }
+    .posts{
+        flex-direction: column;
+    }
+}
